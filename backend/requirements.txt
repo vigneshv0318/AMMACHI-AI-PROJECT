@@ -1,0 +1,29 @@
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.9
+pydantic>=2.6.0
+python-dotenv>=1.0.0
+sqlalchemy>=2.0.25
+psycopg[binary]>=3.1.18
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.1.2
+PyJWT>=2.8.0
+google-auth>=2.27.0
+google-auth-oauthlib>=1.2.0
+google-generativeai>=0.8.0
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-google-genai>=1.0.0
+langchain-groq>=0.1.0
+langgraph>=0.1.0
+deepgram-sdk>=3.0.0
+elevenlabs>=1.0.0
+gTTS>=2.5.1
+groq>=0.9.0
+duckduckgo-search>=5.0.0
+opencv-python-headless>=4.9.0.80
+pillow>=10.2.0
+numpy>=1.26.0
+paddlepaddle>=2.6.0; sys_platform != "darwin"
+paddleocr>=2.7.0; sys_platform != "darwin"
+requests>=2.31.0

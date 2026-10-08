@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: #FFFDF7;
+    color: #292524;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  /* Ammachi Speech Bubble */
+  .ammachi-bubble {
+    @apply relative bg-amber-50 border-2 border-amber-300 rounded-3xl p-5 shadow-sm text-stone-800 transition-all duration-300;
+  }
+
+  .ammachi-bubble::before {
+    content: '';
+    @apply absolute -left-3 top-6 w-0 h-0 border-t-[10px] border-t-transparent border-r-[14px] border-r-amber-300 border-b-[10px] border-b-transparent;
+  }
+
+  .ammachi-bubble::after {
+    content: '';
+    @apply absolute -left-[9px] top-6 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-amber-50 border-b-[8px] border-b-transparent;
+  }
+
+  /* Educational Child-Friendly Card */
+  .module-card {
+    @apply relative overflow-hidden rounded-3xl border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0 cursor-pointer;
+  }
+
+  /* Touch-friendly Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 active:scale-95 shadow-md shadow-amber-500/20 transition-all text-base sm:text-lg min-h-[48px] select-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-bold text-stone-700 bg-amber-100 hover:bg-amber-200 active:scale-95 transition-all text-base min-h-[48px] select-none;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-semibold text-stone-700 border-2 border-stone-200 hover:border-amber-400 hover:bg-amber-50 active:scale-95 transition-all min-h-[48px] select-none;
+  }
+}
+
+/* Custom soft scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fcd34d;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
