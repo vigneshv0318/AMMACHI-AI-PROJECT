@@ -10,6 +10,7 @@ import { ProgressPage } from './pages/ProgressPage';
 import { ChallengePage } from './pages/ChallengePage';
 import { HandwritingPage } from './pages/HandwritingPage';
 import { ProfilePage } from './pages/ProfilePage';
+import { LoadingScreen } from './components/common/LoadingScreen';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { useAuth } from './context/AuthContext';
 
@@ -17,12 +18,7 @@ function App() {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-warmbg text-amber-900 space-y-4">
-        <div className="text-6xl animate-bounce">👵</div>
-        <p className="text-lg font-black tracking-tight">Opening Ammachi's Classroom...</p>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   return (

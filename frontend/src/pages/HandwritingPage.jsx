@@ -143,15 +143,15 @@ export const HandwritingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 pb-20 pt-8 px-4 flex justify-center">
-      <div className="max-w-md w-full space-y-6">
+    <div className="flex justify-center">
+      <div className="max-w-md w-full space-y-4 sm:space-y-6">
         <button onClick={() => navigate('/')} className="flex items-center text-stone-500 font-bold text-sm hover:text-stone-800 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1" /> Back to Dashboard
         </button>
 
-        <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200">
+        <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200">
           <div className="flex flex-col items-center mb-6 text-center">
-            <AmmachiMascot size="lg" className="mb-4" />
+            <AmmachiMascot size="md" className="mb-3" />
             <h1 className="text-2xl font-black text-amber-950 tracking-tight">Handwriting Practice</h1>
             <p className="text-sm font-semibold text-stone-500 mt-1">Write letters in your notebook and let Ammachi check them!</p>
           </div>
@@ -160,12 +160,12 @@ export const HandwritingPage = () => {
             {/* Language Selection */}
             <div>
               <label className="block text-xs font-black text-stone-600 uppercase mb-2">Language</label>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-2 min-[400px]:grid-cols-4 gap-2">
                 {LANGUAGES.map(lang => (
                   <button
                     key={lang.code}
                     onClick={() => setSelectedLang(lang.code)}
-                    className={`px-4 py-2 rounded-xl border-2 font-bold transition-all ${
+                    className={`px-2 py-2.5 rounded-xl border-2 text-sm font-bold transition-all active:scale-95 ${
                       selectedLang === lang.code
                         ? 'border-amber-500 bg-amber-50 text-amber-900'
                         : 'border-stone-200 bg-white text-stone-600 hover:border-amber-200'
@@ -185,7 +185,7 @@ export const HandwritingPage = () => {
               ) : letters.length === 0 ? (
                 <p className="text-sm text-stone-500 italic py-2">No letters available for this language yet.</p>
               ) : (
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-4 min-[400px]:grid-cols-5 gap-2">
                   {letters.map(letter => (
                     <button
                       key={letter.id}
@@ -195,7 +195,7 @@ export const HandwritingPage = () => {
                         setError('');
                         clearPhoto();
                       }}
-                      className={`text-2xl py-3 rounded-xl border-2 font-black transition-all ${
+                      className={`text-2xl aspect-square flex items-center justify-center rounded-xl border-2 font-black transition-all active:scale-95 ${
                         selectedLetter?.id === letter.id
                           ? 'border-amber-500 bg-amber-50 text-amber-900 transform scale-105'
                           : 'border-stone-200 bg-white text-stone-600 hover:border-amber-200'

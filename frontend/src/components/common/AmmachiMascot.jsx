@@ -4,23 +4,28 @@ export const AmmachiMascot = ({ size = 'md', className = '', speaking = false })
   const [imgFailed, setImgFailed] = useState(false);
   const sizeClasses = {
     xs: 'w-10 h-10',
-    sm: 'w-16 h-16',
+    sm: 'w-12 h-12 sm:w-14 sm:h-14',
     md: 'w-20 h-20',
-    lg: 'w-28 h-28',
-    xl: 'w-36 h-36'
+    lg: 'w-24 h-24 sm:w-28 sm:h-28',
+    xl: 'w-32 h-32 sm:w-36 sm:h-36'
   };
 
   return (
-    <div className={`relative inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-amber-400 to-orange-400 p-1 shadow-md ${speaking ? 'ring-4 ring-amber-300 animate-pulse' : ''} ${className}`}>
-      <div className={`flex items-center justify-center rounded-full bg-amber-50 shadow-inner overflow-hidden ${sizeClasses[size] || sizeClasses.md}`}>
+    <div
+      className={`relative inline-flex shrink-0 items-center justify-center rounded-full bg-white p-[3px] shadow-md shadow-orange-500/20 ${
+        speaking ? 'ring-4 ring-amber-300 animate-pulse' : ''
+      } ${className}`}
+    >
+      <div className={`flex items-center justify-center rounded-full overflow-hidden ${sizeClasses[size] || sizeClasses.md}`}>
         {imgFailed ? (
-          <span className="text-3xl leading-none" role="img" aria-label="Ammachi Mascot">👵</span>
+          <span className="flex w-full h-full items-center justify-center bg-gradient-to-br from-amber-300 to-orange-400 text-3xl leading-none" role="img" aria-label="Ammachi Mascot">👵</span>
         ) : (
           <img
-            src="/logo/ammachi_logo.jpg"
+            src="/logo/ammachi.svg"
             alt="Ammachi Mascot"
+            draggable="false"
             onError={() => setImgFailed(true)}
-            className="w-full h-full object-cover transform hover:scale-110 transition-transform"
+            className="w-full h-full object-cover select-none"
           />
         )}
       </div>

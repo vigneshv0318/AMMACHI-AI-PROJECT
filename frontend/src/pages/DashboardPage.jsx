@@ -45,7 +45,7 @@ export const DashboardPage = () => {
       description: 'Challenge a friend to a 5-minute AI language battle! Compete in real-time.',
       icon: Swords,
       emoji: '⚔️',
-      imagePath: '/icons/challenge-icon.png',
+      imagePath: '/icons/challenge.svg',
       color: 'from-amber-500 to-orange-500',
       bgColor: 'bg-amber-50 border-amber-300',
       textColor: 'text-amber-900',
@@ -61,7 +61,7 @@ export const DashboardPage = () => {
       description: 'Speak and practice with patient AI Ammachi. Learn native accents and conversational fluency.',
       icon: Mic,
       emoji: '🎤',
-      imagePath: '/icons/voice-icon.png',
+      imagePath: '/icons/voice.svg',
       color: 'from-emerald-500 to-teal-500',
       bgColor: 'bg-emerald-50 border-emerald-300',
       textColor: 'text-emerald-900',
@@ -77,7 +77,7 @@ export const DashboardPage = () => {
       description: 'Explore Indian festivals, moral folktales, solve quiz challenges, and collect stamps.',
       icon: Sparkles,
       emoji: '🪔',
-      imagePath: '/icons/culture-icon.png',
+      imagePath: '/icons/culture.svg',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-50 border-purple-300',
       textColor: 'text-purple-900',
@@ -93,7 +93,7 @@ export const DashboardPage = () => {
       description: 'Write letters on real paper, take a photo, and Ammachi will check them!',
       icon: Edit3,
       emoji: '✍️',
-      imagePath: '/icons/handwriting-icon.png',
+      imagePath: '/icons/handwriting.svg',
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-50 border-blue-300',
       textColor: 'text-blue-900',
@@ -106,24 +106,28 @@ export const DashboardPage = () => {
   return (
     <div className="space-y-6 sm:space-y-8 animate-in fade-in duration-200">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-br from-amber-400 via-amber-300 to-orange-300 rounded-3xl p-6 sm:p-8 shadow-lg shadow-amber-500/10 border-2 border-amber-300 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-4 sm:gap-6">
-          <AmmachiMascot size="lg" className="shrink-0 ring-4 ring-white/60" />
-          <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 text-amber-950 text-xs font-black uppercase tracking-wider backdrop-blur-sm">
-              <span>{activeLangMeta.greeting}</span>
+      <div className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-amber-300 to-orange-300 rounded-3xl p-5 sm:p-8 shadow-lg shadow-amber-500/15 border-2 border-amber-300/80 flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-6">
+        {/* soft decorative circles */}
+        <span aria-hidden="true" className="pointer-events-none absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/20" />
+        <span aria-hidden="true" className="pointer-events-none absolute -bottom-12 -left-8 w-32 h-32 rounded-full bg-orange-400/20" />
+
+        <div className="relative flex items-center gap-4 sm:gap-6 min-w-0">
+          <AmmachiMascot size="lg" className="ring-4 ring-white/70" />
+          <div className="space-y-1.5 min-w-0">
+            <div className="inline-flex max-w-full items-center px-3 py-1 rounded-full bg-white/70 text-amber-950 text-[11px] sm:text-xs font-black uppercase tracking-wider backdrop-blur-sm">
+              <span className="truncate">{activeLangMeta.greeting}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-amber-950 tracking-tight">
+            <h1 className="text-[22px] leading-tight sm:text-3xl font-black text-amber-950 tracking-tight break-words">
               {greetingName}, ready to learn {currentLanguage}?
             </h1>
-            <p className="text-amber-900/90 text-sm sm:text-base font-medium max-w-lg">
+            <p className="text-amber-900/90 text-sm sm:text-base font-medium max-w-lg hidden min-[400px]:block">
               Let's write letters, talk to Ammachi, and unlock festive cultural stamps today!
             </p>
           </div>
         </div>
 
         {/* Quick Progress Ring Card */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-5 flex items-center gap-4 shrink-0 shadow-sm border border-white/80 w-full md:w-auto justify-around">
+        <div className="relative bg-white/85 backdrop-blur-sm rounded-2xl p-3.5 sm:p-5 flex items-center gap-3 sm:gap-4 shrink-0 shadow-sm border border-white/80 w-full md:w-auto justify-around">
           <div className="text-center">
             <div className="text-2xl font-black text-amber-900 flex items-center justify-center gap-1">
               <Star className="w-5 h-5 text-amber-500 fill-amber-400" />
@@ -162,60 +166,63 @@ export const DashboardPage = () => {
 
       {/* Module Selection Section */}
       <div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-end justify-between gap-3 mb-3 sm:mb-4">
           <h2 className="text-xl sm:text-2xl font-black text-stone-900 tracking-tight flex items-center gap-2">
-            <Compass className="w-6 h-6 text-amber-600" />
+            <Compass className="w-6 h-6 text-amber-600 shrink-0" />
             <span>Learning Modules</span>
           </h2>
-          <span className="text-xs font-bold text-stone-500 uppercase tracking-wider">
+          <span className="text-xs font-bold text-stone-500 uppercase tracking-wider hidden sm:block">
             Tap a module to start
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {modules.map((mod) => (
             <Link
               key={mod.id}
               to={mod.link}
-              className={`module-card ${mod.bgColor} p-6 flex flex-col justify-between group`}
+              className={`module-card ${mod.bgColor} p-4 sm:p-6 flex flex-col justify-between group active:scale-[0.98]`}
             >
-              <div className="space-y-4">
-                <div className="flex items-start justify-between">
-                  <div className="p-2 rounded-2xl bg-white/80 shadow-sm inline-block w-16 h-16 shrink-0 flex items-center justify-center transform group-hover:scale-105 transition-transform">
+              <div className="flex min-[480px]:flex-col gap-4 min-[480px]:gap-4">
+                <div className="flex items-start justify-between shrink-0">
+                  <div className="w-16 h-16 sm:w-[72px] sm:h-[72px] shrink-0 flex items-center justify-center transform group-hover:scale-105 group-hover:-rotate-3 transition-transform">
                     {mod.imagePath && !failedIcons[mod.id] ? (
                       <img
                         src={mod.imagePath}
-                        alt={mod.title}
+                        alt=""
+                        draggable="false"
                         onError={() => setFailedIcons((prev) => ({ ...prev, [mod.id]: true }))}
-                        className="w-full h-full object-contain drop-shadow-sm"
+                        className="w-full h-full object-contain drop-shadow-md"
                       />
                     ) : (
                       <span className="text-4xl">{mod.emoji}</span>
                     )}
                   </div>
-                  <span className="text-[10px] font-extrabold px-2 py-1 rounded-full bg-white/90 text-stone-700 shadow-sm text-center max-w-[80px] leading-tight flex-shrink-0">
+                  <span className="hidden min-[480px]:inline-block text-[10px] font-extrabold px-2 py-1 rounded-full bg-white/90 text-stone-700 shadow-sm text-center max-w-[96px] leading-tight flex-shrink-0">
                     {mod.badgeText}
                   </span>
                 </div>
 
-                <div>
-                  <span className="text-xs font-bold text-stone-500 uppercase tracking-wider block">
-                    {mod.subtitle}
-                  </span>
-                  <h3 className={`text-xl font-black ${mod.textColor} mt-0.5 group-hover:text-amber-700 transition-colors`}>
-                    {mod.title}
-                  </h3>
-                  <span className="text-sm font-bold text-amber-800/80 block mt-0.5">
-                    {mod.nativeTitle}
-                  </span>
-                </div>
+                <div className="min-w-0 space-y-1.5 min-[480px]:space-y-3">
+                  <div>
+                    <span className="text-[11px] sm:text-xs font-bold text-stone-500 uppercase tracking-wider block">
+                      {mod.subtitle}
+                    </span>
+                    <h3 className={`text-lg sm:text-xl font-black ${mod.textColor} leading-tight mt-0.5 group-hover:text-amber-700 transition-colors`}>
+                      {mod.title}
+                    </h3>
+                    <span className="text-sm font-bold text-amber-800/80 block mt-0.5">
+                      {mod.nativeTitle}
+                    </span>
+                  </div>
 
-                <p className="text-xs sm:text-sm text-stone-600 font-medium leading-relaxed">
-                  {mod.description}
-                </p>
+                  <p className="text-[13px] sm:text-sm text-stone-600 font-medium leading-relaxed line-clamp-2 min-[480px]:line-clamp-none">
+                    {mod.description}
+                  </p>
+                </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-stone-200/60 flex items-center justify-between">
+              <div className="mt-3 sm:mt-6 pt-3 sm:pt-4 border-t border-stone-200/60 flex items-center justify-between">
                 <span className="text-xs font-bold text-stone-500">
                   Mastery: <strong className="text-stone-800 font-black">{mod.score}%</strong>
                 </span>

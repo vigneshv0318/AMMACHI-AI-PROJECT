@@ -199,7 +199,7 @@ export const CulturePage = () => {
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-amber-200/80 pb-4">
         <div>
-          <div className="flex items-center gap-2 text-xs font-black text-amber-700 uppercase tracking-wider mb-1">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] sm:text-xs font-black text-amber-700 uppercase tracking-wider mb-1">
             <Link to="/" className="hover:underline flex items-center gap-1">
               <ArrowLeft className="w-3.5 h-3.5" /> Dashboard
             </Link>
@@ -234,25 +234,25 @@ export const CulturePage = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory no-scrollbar -mx-3.5 px-3.5 py-1 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-4 sm:gap-3 sm:overflow-visible">
           {festivals.map((fest) => (
             <button
               key={fest.id}
               onClick={() => handleSelectFestival(fest)}
-              className={`p-3 rounded-2xl border-2 text-left transition-all flex items-start gap-3 select-none ${
+              className={`snap-start shrink-0 w-[38%] min-[420px]:w-[30%] sm:w-auto p-3 rounded-2xl border-2 text-left transition-all flex flex-col sm:flex-row items-start gap-2 sm:gap-3 select-none active:scale-95 ${
                 selectedFestival?.id === fest.id
-                  ? 'bg-amber-100/90 border-amber-500 shadow-md scale-[1.02] ring-2 ring-amber-400/50'
+                  ? 'bg-amber-100/90 border-amber-500 shadow-md ring-2 ring-amber-400/50'
                   : 'bg-white border-amber-200 hover:border-amber-400'
               }`}
             >
-              <span className="text-3xl p-1 rounded-xl bg-amber-50 shrink-0">
+              <span className="text-3xl p-1 rounded-xl bg-amber-50 shrink-0 leading-none">
                 {fest.icon}
               </span>
-              <div className="min-w-0 flex-1">
-                <h4 className="font-extrabold text-sm text-stone-900 leading-tight truncate">
+              <div className="min-w-0 flex-1 w-full">
+                <h4 className="font-extrabold text-sm text-stone-900 leading-tight line-clamp-2 break-words">
                   {fest.name}
                 </h4>
-                <span className="text-xs font-bold text-amber-800 block mt-0.5 truncate">
+                <span className="text-xs font-bold text-amber-800 block mt-0.5 line-clamp-1 break-words">
                   {fest.native_name}
                 </span>
                 <span className="inline-flex items-center gap-1 text-[10px] font-bold text-purple-700 mt-1">
@@ -265,51 +265,42 @@ export const CulturePage = () => {
       </div>
 
       {/* Tab Navigation: 1. Video Stories | 2. Quiz Arena | 3. Folklore Chat */}
-      <div className="flex items-center gap-2 border-b border-amber-200 pb-1">
-        <button
-          onClick={() => setActiveTab('video')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-extrabold transition-all ${
-            activeTab === 'video'
-              ? 'bg-red-600 text-white shadow-md'
-              : 'bg-white text-stone-700 border border-amber-200 hover:bg-amber-50'
-          }`}
-        >
-          <Youtube className="w-4 h-4" />
-          <span>🎬 Watch Video Stories</span>
-          <span className="px-2 py-0.5 bg-red-700/60 rounded-full text-[10px]">{festivalVideos.length} Videos</span>
-        </button>
-
-        <button
-          onClick={() => setActiveTab('quiz')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-extrabold transition-all ${
-            activeTab === 'quiz'
-              ? 'bg-amber-500 text-white shadow-md'
-              : 'bg-white text-stone-700 border border-amber-200 hover:bg-amber-50'
-          }`}
-        >
-          <Trophy className="w-4 h-4" />
-          <span>🏆 10-Question Quiz Arena</span>
-          <span className="px-2 py-0.5 bg-amber-600/60 rounded-full text-[10px]">+10 Pts / Q</span>
-        </button>
-
-        <button
-          onClick={() => setActiveTab('story')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-extrabold transition-all ${
-            activeTab === 'story'
-              ? 'bg-amber-700 text-white shadow-md'
-              : 'bg-white text-stone-700 border border-amber-200 hover:bg-amber-50'
-          }`}
-        >
-          <BookOpen className="w-4 h-4" />
-          <span>👵 Ammachi's Folklore Chat</span>
-        </button>
+      <div role="tablist" className="grid grid-cols-3 sm:flex sm:items-center gap-2 p-1.5 bg-amber-50 border border-amber-200 rounded-2xl">
+        {[
+          { id: 'video', icon: Youtube, short: 'Videos', long: 'Watch Video Stories', badge: `${festivalVideos.length}`, active: 'bg-red-600 text-white shadow-md', badgeCls: 'bg-red-800/50' },
+          { id: 'quiz', icon: Trophy, short: 'Quiz', long: '10-Question Quiz Arena', badge: '+10/Q', active: 'bg-amber-500 text-white shadow-md', badgeCls: 'bg-amber-700/40' },
+          { id: 'story', icon: BookOpen, short: 'Stories', long: "Ammachi's Folklore Chat", badge: null, active: 'bg-amber-700 text-white shadow-md', badgeCls: '' },
+        ].map((tab) => {
+          const TabIcon = tab.icon;
+          const isActive = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 min-h-[56px] sm:min-h-0 px-2 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all active:scale-95 ${
+                isActive ? tab.active : 'text-stone-700 hover:bg-white'
+              }`}
+            >
+              <TabIcon className="w-5 h-5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="sm:hidden">{tab.short}</span>
+              <span className="hidden sm:inline">{tab.long}</span>
+              {tab.badge && (
+                <span className={`hidden sm:inline px-2 py-0.5 rounded-full text-[10px] ${isActive ? tab.badgeCls : 'bg-amber-100'}`}>
+                  {tab.badge}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       {/* TAB 1: WATCH VIDEO STORIES & THEATER */}
       {activeTab === 'video' && (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           <div className="lg:col-span-8 bg-white border-2 border-amber-200 rounded-3xl p-5 sm:p-6 shadow-sm space-y-4">
-            <div className="flex items-center justify-between border-b border-amber-100 pb-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-amber-100 pb-3">
               <div className="flex items-center gap-2">
                 <span className="p-2 rounded-xl bg-red-100 text-red-600">
                   <Youtube className="w-5 h-5" />
@@ -325,7 +316,7 @@ export const CulturePage = () => {
               </div>
               <button
                 onClick={() => setActiveTab('quiz')}
-                className="btn-primary text-xs px-4 py-2 flex items-center gap-1.5"
+                className="btn-primary text-sm px-4 py-2 w-full sm:w-auto flex items-center gap-1.5"
               >
                 <Trophy className="w-3.5 h-3.5" />
                 <span>Take Quiz on this Video</span>

@@ -42,7 +42,7 @@ export const SpeechBubble = ({
   return (
     <div className={`ammachi-bubble ${className}`}>
       <div className="flex items-center justify-between gap-2 mb-2">
-        <div className="flex items-center gap-1.5 font-bold text-amber-900 text-sm sm:text-base">
+        <div className="flex items-center gap-1.5 font-bold text-amber-900 text-sm sm:text-base min-w-0">
           <Sparkles className="w-4 h-4 text-amber-500 fill-amber-400" />
           <span>{title || `${activeLangMeta.persona.split(' ')[0]} says:`}</span>
         </div>
@@ -50,7 +50,7 @@ export const SpeechBubble = ({
           <button
             onClick={handlePlayAudio}
             type="button"
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-200/70 hover:bg-amber-300 text-amber-900 text-xs font-semibold active:scale-95 transition-all shadow-sm"
+            className="inline-flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-200/70 hover:bg-amber-300 text-amber-900 text-xs font-semibold active:scale-95 transition-all shadow-sm"
             title="Listen to Ammachi"
           >
             {isPlaying ? (
@@ -61,13 +61,13 @@ export const SpeechBubble = ({
             ) : (
               <>
                 <Volume2 className="w-3.5 h-3.5 text-amber-800" />
-                <span>Listen 🔊</span>
+                <span>Listen</span>
               </>
             )}
           </button>
         )}
       </div>
-      <p className="text-stone-800 text-base sm:text-lg leading-relaxed font-medium">
+      <p className="text-stone-800 text-[15px] sm:text-lg leading-relaxed font-medium">
         {text}
       </p>
     </div>

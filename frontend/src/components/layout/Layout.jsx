@@ -21,15 +21,15 @@ export const Layout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-warmbg text-stone-800 pb-20 sm:pb-8">
+    <div className="min-h-screen min-h-[100dvh] flex flex-col bg-warmbg text-stone-800 overflow-x-clip pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:pb-8">
       {isOffline && (
         <div className="bg-amber-600 text-white text-xs font-bold py-1.5 px-4 text-center flex items-center justify-center gap-2">
-          <WifiOff className="w-4 h-4" />
+          <WifiOff className="w-4 h-4 shrink-0" />
           <span>You are offline. Static learning lessons are available!</span>
         </div>
       )}
       <Navbar />
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-4 sm:py-8">
+      <main className="flex-1 max-w-6xl w-full min-w-0 mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
         <Outlet />
       </main>
       <BottomNav />

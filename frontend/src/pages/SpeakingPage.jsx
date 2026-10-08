@@ -207,16 +207,16 @@ export const SpeakingPage = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
       {/* Header Bar */}
-      <div className="flex items-center justify-between bg-white/80 backdrop-blur border border-amber-200 rounded-3xl p-4 sm:p-5 shadow-sm">
-        <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/80 backdrop-blur border border-amber-200 rounded-3xl p-4 sm:p-5 shadow-sm">
+        <div className="flex items-start gap-3 min-w-0">
           <Link
-            to="/dashboard"
+            to="/"
             className="p-2.5 rounded-2xl bg-amber-50 hover:bg-amber-100 text-amber-900 transition-all border border-amber-200"
           >
             <ArrowLeft className="w-5 h-5" />
           </Link>
           <div>
-            <h1 className="text-xl sm:text-2xl font-black text-amber-950 flex items-center gap-2">
+            <h1 className="text-xl sm:text-2xl font-black text-amber-950 flex flex-wrap items-center gap-2">
               <span>Pronunciation Tutor</span>
               <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
                 AI Voice
@@ -229,13 +229,13 @@ export const SpeakingPage = () => {
         </div>
 
         {/* Language Switcher */}
-        <div className="flex items-center gap-1.5 bg-amber-50 p-1.5 rounded-2xl border border-amber-200">
-          <Globe className="w-4 h-4 text-amber-700 ml-1 hidden sm:inline" />
+        <div className="grid grid-cols-3 sm:flex sm:items-center gap-1.5 bg-amber-50 p-1.5 rounded-2xl border border-amber-200">
+          <Globe className="w-4 h-4 text-amber-700 ml-1 hidden sm:block" />
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
               key={lang.name}
               onClick={() => handleLanguageChange(lang.name)}
-              className={`px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all ${
+              className={`px-3 py-2 sm:py-1.5 rounded-xl text-sm sm:text-xs font-extrabold transition-all active:scale-95 ${
                 selectedLanguage === lang.name
                   ? 'bg-amber-600 text-white shadow-sm'
                   : 'text-amber-900 hover:bg-amber-100'

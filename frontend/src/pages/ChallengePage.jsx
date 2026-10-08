@@ -233,17 +233,15 @@ export const ChallengePage = () => {
   // ==========================================
   if (!id) {
     return (
-      <div className="min-h-screen bg-stone-50 pb-20 pt-8 px-4 flex justify-center">
-        <div className="max-w-md w-full space-y-6">
+      <div className="flex justify-center">
+        <div className="max-w-md w-full space-y-4 sm:space-y-6">
           <button onClick={() => navigate('/')} className="flex items-center text-stone-500 font-bold text-sm hover:text-stone-800 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-1" /> Back to Dashboard
           </button>
 
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200">
             <div className="flex flex-col items-center mb-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-md mb-4 transform -rotate-3">
-                <Swords className="w-8 h-8 text-white" />
-              </div>
+              <img src="/icons/challenge.svg" alt="" draggable="false" className="w-20 h-20 mb-3 drop-shadow-md -rotate-3" />
               <h1 className="text-2xl font-black text-amber-950 tracking-tight">Challenge a Friend</h1>
               <p className="text-sm font-semibold text-stone-500 mt-1">10-Question Language Battle</p>
             </div>
@@ -315,7 +313,7 @@ export const ChallengePage = () => {
   // Handle Error State
   if (error) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center p-4">
+      <div className="min-h-[60vh] flex flex-col items-center justify-center">
         <XCircle className="w-16 h-16 text-rose-500 mb-4" />
         <h2 className="text-xl font-black text-stone-800 mb-2">Oops!</h2>
         <p className="text-stone-600 font-medium mb-6 text-center">{error}</p>
@@ -326,7 +324,7 @@ export const ChallengePage = () => {
 
   if (!challengeState) {
     return (
-      <div className="min-h-screen bg-stone-50 flex items-center justify-center">
+      <div className="min-h-[60vh] flex items-center justify-center">
         <Loader2 className="w-8 h-8 text-amber-500 animate-spin" />
       </div>
     );
@@ -337,8 +335,8 @@ export const ChallengePage = () => {
   // ==========================================
   if (!participantId) {
     return (
-      <div className="min-h-screen bg-stone-50 p-4 flex justify-center items-center">
-        <div className="max-w-md w-full bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200 text-center space-y-6">
+      <div className="min-h-[60vh] flex justify-center items-center">
+        <div className="max-w-md w-full bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200 text-center space-y-6">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto shadow-inner">
             <Swords className="w-8 h-8 text-blue-600" />
           </div>
@@ -383,10 +381,10 @@ export const ChallengePage = () => {
     const isCreator = challengeState.participants.length > 0 && String(challengeState.participants[0].id) === String(participantId);
 
     return (
-      <div className="min-h-screen bg-stone-50 p-4">
+      <div className="">
         <div className="max-w-md w-full mx-auto space-y-6 pt-4">
 
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200 text-center">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200 text-center">
             <h2 className="text-2xl font-black text-amber-950 mb-1">Challenge Lobby</h2>
             <p className="text-sm font-bold text-stone-500 capitalize">{challengeState.language} • {challengeState.difficulty}</p>
 
@@ -466,9 +464,9 @@ export const ChallengePage = () => {
   // ==========================================
   if (challengeState.status === 'COMPLETED' && results) {
     return (
-      <div className="min-h-screen bg-stone-50 p-4 pb-20 pt-8 flex justify-center">
-        <div className="max-w-md w-full space-y-6">
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200 text-center">
+      <div className="flex justify-center">
+        <div className="max-w-md w-full space-y-4 sm:space-y-6">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200 text-center">
             <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-2" />
             <h1 className="text-3xl font-black text-amber-950">Challenge Complete!</h1>
             <p className="text-stone-500 font-bold capitalize mt-1 mb-8">{challengeState.language} • {challengeState.difficulty}</p>
@@ -509,9 +507,9 @@ export const ChallengePage = () => {
   // VIEW: ACTIVE GAMEPLAY
   // ==========================================
   return (
-    <div className="min-h-screen bg-stone-50 pb-safe">
+    <div className="-mx-3.5 sm:mx-0">
       {/* HUD Header */}
-      <div className="bg-white px-4 py-0 border-b-2 border-amber-200 flex flex-col sticky top-0 z-10 shadow-sm">
+      <div className="bg-white/95 backdrop-blur px-3 sm:px-4 py-0 border-b-2 border-amber-200 flex flex-col sticky top-14 sm:top-[72px] z-30 shadow-sm sm:rounded-2xl sm:border-2">
         <div className="flex items-center justify-between pt-3 pb-2 w-full max-w-md mx-auto">
           <div className="flex gap-4 px-2 items-center">
             <button
@@ -529,7 +527,7 @@ export const ChallengePage = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="bg-emerald-100 px-4 py-1.5 rounded-full border border-emerald-300">
+            <div className="bg-emerald-100 px-3 py-1.5 rounded-full border border-emerald-300">
               <span className="text-sm font-black tracking-wider text-emerald-900 uppercase">
                 10 Questions
               </span>
@@ -550,10 +548,10 @@ export const ChallengePage = () => {
       </div>
 
       {/* Main Game Area */}
-      <div className="max-w-md mx-auto w-full p-4 pt-6">
+      <div className="max-w-md mx-auto w-full px-3.5 sm:px-0 pt-4 sm:pt-6">
 
         {activeTab === 'scores' ? (
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200 animate-in fade-in slide-in-from-bottom-4">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200 animate-in fade-in slide-in-from-bottom-4">
             <h2 className="text-xl font-black text-stone-800 mb-6 text-center">Live Standings</h2>
             <div className="space-y-4">
               {[...challengeState.participants].sort((a, b) => b.score - a.score).map((p, i) => {
@@ -581,7 +579,7 @@ export const ChallengePage = () => {
             <span className="font-bold">Preparing next question...</span>
           </div>
         ) : currentQuestion ? (
-          <div className="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-200 animate-in fade-in slide-in-from-bottom-4">
+          <div className="bg-white rounded-3xl p-4 sm:p-6 shadow-lg shadow-amber-500/10 border-2 border-amber-200 animate-in fade-in slide-in-from-bottom-4">
 
             <div className="mb-6 text-center">
               <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-black rounded-full uppercase tracking-wider">

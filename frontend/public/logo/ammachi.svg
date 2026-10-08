@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Ammachi">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#FFE7A3"/>
+      <stop offset="0.55" stop-color="#FDBA4D"/>
+      <stop offset="1" stop-color="#F08A24"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E3A574"/>
+      <stop offset="1" stop-color="#C98552"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F1EC"/>
+      <stop offset="1" stop-color="#C9C3BA"/>
+    </linearGradient>
+    <linearGradient id="saree" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C2185B"/>
+      <stop offset="1" stop-color="#8E0E3C"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE08A"/>
+      <stop offset="1" stop-color="#E0A21B"/>
+    </linearGradient>
+    <clipPath id="circle"><circle cx="100" cy="100" r="96"/></clipPath>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="url(#bg)"/>
+  <!-- soft kolam dots ring -->
+  <g fill="#FFF6DA" opacity="0.55">
+    <circle cx="100" cy="14" r="2.6"/><circle cx="143" cy="25.5" r="2.6"/><circle cx="174.5" cy="57" r="2.6"/>
+    <circle cx="186" cy="100" r="2.6"/><circle cx="25.5" cy="57" r="2.6"/><circle cx="14" cy="100" r="2.6"/>
+    <circle cx="57" cy="25.5" r="2.6"/>
+  </g>
+
+  <g clip-path="url(#circle)">
+    <!-- saree / shoulders -->
+    <path d="M30 200 C34 160 62 146 100 146 C138 146 166 160 170 200 Z" fill="url(#saree)"/>
+    <!-- pallu drape over shoulder -->
+    <path d="M118 148 C140 152 158 166 166 200 L140 200 C136 178 128 162 112 152 Z" fill="#E91E63" opacity="0.85"/>
+    <!-- gold zari border -->
+    <path d="M118 148 C140 152 158 166 166 200" fill="none" stroke="url(#gold)" stroke-width="6"/>
+    <path d="M70 152 C80 162 120 162 130 152" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+    <!-- neck -->
+    <path d="M89 126 L111 126 L113 150 C107 155 93 155 87 150 Z" fill="#C98552"/>
+    <!-- necklace -->
+    <path d="M84 148 C92 158 108 158 116 148" fill="none" stroke="url(#gold)" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="100" cy="159" r="4.5" fill="#D32F2F" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+
+  <!-- hair bun with jasmine -->
+  <circle cx="100" cy="40" r="20" fill="url(#hair)"/>
+  <g fill="#FFFFFF" stroke="#E8E2D6" stroke-width="0.8">
+    <circle cx="82" cy="34" r="4.2"/><circle cx="88" cy="26" r="4.2"/><circle cx="97" cy="21.5" r="4.2"/>
+    <circle cx="107" cy="22" r="4.2"/><circle cx="115" cy="27" r="4.2"/><circle cx="119" cy="35" r="4.2"/>
+  </g>
+  <g fill="#7CB342"><circle cx="85" cy="30" r="1.4"/><circle cx="102" cy="20.5" r="1.4"/><circle cx="117" cy="31" r="1.4"/></g>
+
+  <!-- back hair -->
+  <path d="M56 92 C54 58 76 44 100 44 C124 44 146 58 144 92 L140 112 L60 112 Z" fill="url(#hair)"/>
+
+  <!-- ears + jhumka earrings -->
+  <ellipse cx="60" cy="96" rx="7" ry="10" fill="#C98552"/>
+  <ellipse cx="140" cy="96" rx="7" ry="10" fill="#C98552"/>
+  <g fill="url(#gold)">
+    <path d="M54 108 h12 l-2 8 h-8 z"/><circle cx="60" cy="119" r="3"/>
+    <path d="M134 108 h12 l-2 8 h-8 z"/><circle cx="140" cy="119" r="3"/>
+  </g>
+
+  <!-- face -->
+  <path d="M62 88 C62 62 80 52 100 52 C120 52 138 62 138 88 C138 116 122 134 100 134 C78 134 62 116 62 88 Z" fill="url(#skin)"/>
+
+  <!-- hair parting framing face -->
+  <path d="M62 86 C64 64 80 54 100 55 C96 62 84 66 70 86 Z" fill="url(#hair)"/>
+  <path d="M138 86 C136 64 120 54 100 55 C104 62 116 66 130 86 Z" fill="url(#hair)"/>
+  <path d="M100 54 L100 62" stroke="#B0A89C" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- vibhuti / kumkum on forehead -->
+  <circle cx="100" cy="74" r="4.2" fill="#D50000"/>
+  <circle cx="98.8" cy="72.8" r="1.2" fill="#FF8A80"/>
+
+  <!-- eyebrows -->
+  <path d="M76 80 C80 77 86 77 90 79" fill="none" stroke="#9E9890" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M110 79 C114 77 120 77 124 80" fill="none" stroke="#9E9890" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- round glasses -->
+  <g fill="#FFFFFF" fill-opacity="0.18" stroke="#6D4C41" stroke-width="3">
+    <circle cx="83" cy="92" r="12"/>
+    <circle cx="117" cy="92" r="12"/>
+  </g>
+  <path d="M95 92 C98 89 102 89 105 92" fill="none" stroke="#6D4C41" stroke-width="3"/>
+  <path d="M71 90 L64 88 M129 90 L136 88" stroke="#6D4C41" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- smiling eyes -->
+  <path d="M77 93 C80 89 86 89 89 93" fill="none" stroke="#3E2723" stroke-width="3" stroke-linecap="round"/>
+  <path d="M111 93 C114 89 120 89 123 93" fill="none" stroke="#3E2723" stroke-width="3" stroke-linecap="round"/>
+  <!-- smile lines -->
+  <path d="M73 99 l-3 2 M127 99 l3 2" stroke="#B9774A" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- nose + nose ring -->
+  <path d="M100 96 C98 104 97 107 100 109 C102 110 104 109 104 108" fill="none" stroke="#A86A3F" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="106" cy="107" r="2.6" fill="none" stroke="url(#gold)" stroke-width="1.8"/>
+  <circle cx="106" cy="104.6" r="1.3" fill="#FFFFFF"/>
+
+  <!-- cheeks -->
+  <ellipse cx="76" cy="109" rx="7" ry="4.5" fill="#F06292" opacity="0.35"/>
+  <ellipse cx="124" cy="109" rx="7" ry="4.5" fill="#F06292" opacity="0.35"/>
+
+  <!-- warm smile -->
+  <path d="M86 115 C92 123 108 123 114 115" fill="#8D2B2B" stroke="#6D1F1F" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M90 117 C95 120 105 120 110 117" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- rim highlight -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FFF3D1" stroke-width="2" opacity="0.7"/>
+</svg>
