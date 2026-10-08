@@ -8,6 +8,10 @@ import './index.css';
 
 // PWA Service Worker Registration
 import { registerSW } from 'virtual:pwa-register';
+import { captureInstallPrompt } from './utils/pwaInstall';
+
+// Chrome fires `beforeinstallprompt` very early; keep it so the in-app Install button can use it
+captureInstallPrompt();
 
 const updateSW = registerSW({
   onNeedRefresh() {

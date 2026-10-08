@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { authService } from '../services/authService';
 import { AmmachiMascot } from '../components/common/AmmachiMascot';
+import { InstallPrompt } from '../components/common/InstallPrompt';
 
 export const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -152,7 +153,7 @@ export const AuthPage = () => {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center py-6 px-4">
+    <div className="min-h-[85vh] flex flex-col items-center justify-center gap-4 py-6 px-4">
       <div className="w-full max-w-md bg-white border-2 border-amber-200/80 rounded-3xl p-6 sm:p-8 shadow-xl shadow-amber-500/5">
         {/* Header Mascot */}
         <div className="text-center mb-6">
@@ -317,6 +318,7 @@ export const AuthPage = () => {
           </button>
         </div>
       </div>
+      <InstallPrompt variant="card" className="w-full max-w-md" />
     </div>
   );
 };

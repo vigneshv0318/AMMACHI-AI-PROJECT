@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { BottomNav } from './BottomNav';
 import { WifiOff } from 'lucide-react';
+import { InstallPrompt } from '../common/InstallPrompt';
 
 export const Layout = () => {
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
@@ -32,6 +33,7 @@ export const Layout = () => {
       <main className="flex-1 max-w-6xl w-full min-w-0 mx-auto px-3.5 sm:px-6 py-4 sm:py-8">
         <Outlet />
       </main>
+      <InstallPrompt aboveBottomNav />
       <BottomNav />
     </div>
   );

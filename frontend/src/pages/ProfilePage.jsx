@@ -6,6 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { AmmachiMascot } from '../components/common/AmmachiMascot';
 import { userService } from '../services/userService';
 import { API_BASE_URL } from '../services/api';
+import { InstallPrompt } from '../components/common/InstallPrompt';
 
 export const ProfilePage = () => {
   const { user, logout } = useAuth();
@@ -155,6 +156,8 @@ export const ProfilePage = () => {
           </div>
         </div>
       </div>
+
+      <InstallPrompt variant="card" alwaysShow />
 
       {/* 2. LANGUAGE JOURNEY */}
       <div className="bg-white border-2 border-stone-200/80 rounded-3xl p-6 sm:p-8 shadow-sm">
