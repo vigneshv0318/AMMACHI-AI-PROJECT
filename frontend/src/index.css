@@ -43,6 +43,38 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  /* Learn-path node entrance pop (Duolingo-style) */
+  @keyframes node-pop {
+    0%   { opacity: 0; transform: scale(.5) translateY(16px); }
+    70%  { transform: scale(1.1) translateY(-3px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .node-pop {
+    animation: node-pop .5s cubic-bezier(.34,1.56,.64,1) backwards;
+  }
+
+  /* START bubble gentle bob */
+  @keyframes start-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  .start-bob { animation: start-bob 1.5s ease-in-out infinite; }
+
+  /* Current node heartbeat */
+  @keyframes node-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+  }
+  .node-pulse { animation: node-pulse 1.5s ease-in-out infinite; }
+
+  /* Scenery float (side decorations on the learning path) */
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-10px) rotate(3deg); }
+  }
+  .floaty { animation: floaty 4s ease-in-out infinite; }
+  .floaty-slow { animation: floaty 6s ease-in-out infinite reverse; }
 }
 
 @layer components {

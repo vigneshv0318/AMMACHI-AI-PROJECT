@@ -98,7 +98,7 @@ def init_db():
 
     if HAS_SQLALCHEMY and Base and engine:
         try:
-            from database import models, handwriting_models
+            from database import models, handwriting_models, learn_models
             Base.metadata.create_all(bind=engine)
         except Exception as e:
             logger.warning("Base metadata create_all warning: %s", e)
@@ -187,7 +187,7 @@ def init_db():
 
 def _init_postgres():
     """Create all tables on PostgreSQL (e.g. Supabase) and bootstrap the default student user."""
-    from database import models, handwriting_models
+    from database import models, handwriting_models, learn_models
     from database.crud import hash_password
 
     Base.metadata.create_all(bind=engine)

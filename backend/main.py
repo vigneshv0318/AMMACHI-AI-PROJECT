@@ -18,7 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger("ammachi.main")
 
 from database.connection import init_db
-from api import auth, voice, culture, user, challenge, handwriting
+from api import auth, voice, culture, user, challenge, handwriting, learn
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -93,6 +93,7 @@ app.include_router(challenge.router, prefix="/challenges", tags=["Friend vs Frie
 app.include_router(culture.router, prefix="/culture", tags=["Culture / Discovery Agent"])
 app.include_router(user.router, prefix="/user", tags=["User Profile & Progress"])
 app.include_router(handwriting.router, prefix="/handwriting", tags=["Handwriting Assessment"])
+app.include_router(learn.router, prefix="/learn", tags=["Learn Path & Gamification"])
 
 @app.get("/")
 def read_root():

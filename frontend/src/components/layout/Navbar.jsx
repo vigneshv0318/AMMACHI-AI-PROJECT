@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flame, Star, Globe, User, ChevronDown, Check } from 'lucide-react';
+import { LearnHud } from '../learn/LearnHud';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { AmmachiMascot } from '../common/AmmachiMascot';
@@ -93,18 +94,8 @@ export const Navbar = () => {
             )}
           </div>
 
-          {/* Points & streak */}
-          <div className="flex items-center gap-1.5 sm:gap-2 h-9 bg-white border border-amber-200 px-2.5 sm:px-3 rounded-full shadow-sm">
-            <div className="flex items-center gap-1 text-amber-800 font-extrabold text-xs sm:text-sm" title="Learning Points">
-              <Star className="w-4 h-4 text-amber-500 fill-amber-400" />
-              <span>{user?.points || 0}</span>
-            </div>
-            <div className="w-px h-3.5 bg-amber-200 hidden min-[420px]:block" />
-            <div className="items-center gap-1 text-orange-600 font-extrabold text-xs sm:text-sm hidden min-[420px]:flex" title="Active Streak">
-              <Flame className="w-4 h-4 text-orange-500 fill-orange-400" />
-              <span>{user?.streak || 1}d</span>
-            </div>
-          </div>
+          {/* Gamification HUD (streak · gems · hearts · XP) */}
+          <LearnHud compact />
 
           {/* Profile */}
           <Link

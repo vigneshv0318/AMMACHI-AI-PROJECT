@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, PenLine, Mic, Sparkles, Award } from 'lucide-react';
+import { Home, PenLine, Mic, Sparkles, Award, Map } from 'lucide-react';
 
 export const BottomNav = () => {
   const navItems = [
+    { to: '/learn', label: 'Path', icon: Map },
     { to: '/', label: 'Home', icon: Home, end: true },
     { to: '/handwriting', label: 'Write', icon: PenLine },
     { to: '/speaking', label: 'Speak', icon: Mic },
@@ -16,7 +17,7 @@ export const BottomNav = () => {
       aria-label="Main"
       className="fixed bottom-0 inset-x-0 z-40 sm:hidden bg-white/95 backdrop-blur-md border-t border-amber-200/80 shadow-[0_-4px_20px_rgba(180,83,9,0.08)] pb-[env(safe-area-inset-bottom)]"
     >
-      <div className="grid grid-cols-5 px-1">
+      <div className="grid grid-cols-6 px-0.5">
         {navItems.map(({ to, label, icon: Icon, end }) => (
           <NavLink
             key={to}
