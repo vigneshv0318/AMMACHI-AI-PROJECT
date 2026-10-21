@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Edit3, Mic, Sparkles, Star, Flame, Award, ArrowRight, BookOpen, Compass, ChevronRight, Swords } from 'lucide-react';
+import { Edit3, Mic, Sparkles, Star, Flame, Award, ArrowRight, BookOpen, Compass, ChevronRight, Swords, Map } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
 import { userService } from '../services/userService';
@@ -37,6 +37,22 @@ export const DashboardPage = () => {
 
   const modules = [
 
+    {
+      id: 'learn',
+      title: 'Learning Path',
+      subtitle: 'Adventure Path',
+      nativeTitle: currentLanguage === 'Tamil' ? 'கற்றல் பாதை' : (currentLanguage === 'Telugu' ? 'అభ్యాస మార్గం' : 'सीखने का रास्ता'),
+      description: 'Follow the winding path of lessons, stories and chests — earn XP, keep your streak and climb the leagues!',
+      icon: Map,
+      emoji: '🗺️',
+      imagePath: '/icons/writing.svg',
+      color: 'from-sky-500 to-blue-500',
+      bgColor: 'bg-sky-50 border-sky-300',
+      textColor: 'text-sky-900',
+      link: '/learn',
+      score: null,
+      badgeText: 'XP · Streaks · Quests'
+    },
     {
       id: 'challenge',
       title: 'Ammachi Challenge',
