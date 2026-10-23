@@ -23,9 +23,10 @@
 
 The platform combines warm, motherly AI mentorship with cutting-edge vision, speech, and agentic workflows across three core modules:
 
-1. ✍️ **AI Handwritten Tutor (Bodhan IndicOCR + Computer Vision)**: Write in a real notebook, snap a photo, and our dedicated preprocessing pipeline (CLAHE, Adaptive Thresholding, EXIF correction) prepares the image for Bodhan's IndicOCR engine. It strictly validates against supported characters to evaluate handwriting accuracy.
-2. 🎤 **AI Voice Agent (Deepgram STT + Patience Denoising Agent + ElevenLabs TTS)**: Practice speaking and conversational fluency with an adaptive, stutter-tolerant grandmother persona that recasts mistakes gently.
-3. 🏆 **Challenge-a-Friend & Cultural Gamification**: A robust 10-question challenge module allowing kids to compete in language and cultural knowledge, managed by an intelligent multi-agent AI system. Explore Indian festivals, folktales, solve quiz challenges, and collect digital Cultural Stamps.
+1. 🗺️ **Duolingo-style Learning Path & Gamification**: A snaking adventure path of lessons, stories, chests and unit reviews. Bite-sized exercise player (tap-to-answer, word banks, listening, pair matching, speech) with XP, hearts, gems, daily streaks with freezes, daily quests, weekly leagues, and a gem shop.
+2. ✍️ **AI Handwritten Tutor (Bodhan IndicOCR + Computer Vision)**: Write in a real notebook, snap a photo, and our dedicated preprocessing pipeline (CLAHE, Adaptive Thresholding, EXIF correction) prepares the image for Bodhan's IndicOCR engine. It strictly validates against supported characters to evaluate handwriting accuracy.
+3. 🎤 **AI Voice Agent (Deepgram STT + Patience Denoising Agent + ElevenLabs TTS)**: Practice speaking and conversational fluency with an adaptive, stutter-tolerant grandmother persona that recasts mistakes gently.
+4. 🏆 **Challenge-a-Friend & Cultural Gamification**: A robust 10-question challenge module allowing kids to compete in language and cultural knowledge, managed by an intelligent multi-agent AI system. Explore Indian festivals, folktales, solve quiz challenges, and collect digital Cultural Stamps.
 
 ---
 
@@ -59,6 +60,7 @@ The platform combines warm, motherly AI mentorship with cutting-edge vision, spe
 - **Vision / OCR**: Bodhan IndicOCR + custom OpenCV preprocessing pipeline (CLAHE, bilateral filtering, Gaussian adaptive thresholding, intelligent EXIF orientation handling).
 - **Speech**: Deepgram STT (`nova-2`), ElevenLabs emotive Grandmother TTS (`eleven_multilingual_v2`), gTTS regional fallback.
 - **Database**: PostgreSQL with SQLAlchemy 2.0 and Psycopg 3 driver (with automatic zero-config SQLite development fallback).
+- **Gamification**: Duolingo-style economy — XP levels, hearts with timed refill, gems, streak freezes, daily quests, weekly XP leagues (Bronze → Diamond). Lesson exercises are seeded offline for 5 languages and can be AI-generated (Groq/Gemini) with strict JSON validation + seed fallback.
 
 ---
 
@@ -73,11 +75,13 @@ AI-Native-Language-Tutor-main/
 │   │   ├── handwriting.py       # Module 1: Handwriting analysis & letters API
 │   │   ├── challenge.py         # Module 3: Challenge-a-friend WebSocket and REST endpoints
 │   │   ├── voice.py             # Module 2: STT, Patience Agent, & ElevenLabs TTS
+│   │   ├── learn.py             # Module 4: Learning path, lesson attempts, XP/hearts/streaks/quests/leagues/shop
 │   │   └── user.py              # User progress, stats, and passport stamps
 │   │
 │   ├── database/
 │   │   ├── connection.py         # SQLAlchemy engine, Psycopg 3, & SQLite fallback
 │   │   ├── models.py             # User, LearningProgress, CulturalStamp, Session
+│   │   ├── learn_models.py       # UserStats, LearnUnit/Node, NodeProgress, LessonAttempt, QuestProgress, WeeklyXp
 │   │   ├── handwriting_models.py # Handwriting models (Letters, Attempts)
 │   │   └── crud.py               # Data access layer & streak/progress metrics
 │   │
@@ -88,6 +92,8 @@ AI-Native-Language-Tutor-main/
 │   │   ├── challenge_service.py      # Core challenge logic (10-question fixed sets)
 │   │   ├── challenge_ai.py           # Gemini prompt-generation for challenges
 │   │   ├── gemini_service.py         # Gemini Multimodal Vision & LLM completion
+│   │   ├── learn_content.py          # Learn-path seed corpus (5 languages) + AI exercise generation
+│   │   ├── gamification.py           # XP/gems/hearts/streak/quest/league economy engine
 │   │   └── voice_service.py          # Deepgram STT & ElevenLabs/gTTS streaming
 │   │
 │   ├── tests/
@@ -101,10 +107,10 @@ AI-Native-Language-Tutor-main/
 │   ├── public/                  
 │   │   └── logo/                # Ammachi Custom Logo
 │   ├── src/
-│   │   ├── components/          # Mascots, Speech bubbles, Navbars, Audio players
-│   │   ├── pages/               # Auth, Dashboard, Handwriting, Challenge, Speaking, Progress
+│   │   ├── components/          # Mascots, Speech bubbles, Navbars, Audio players, learn/ (HUD, exercises)
+│   │   ├── pages/               # Auth, Dashboard, LearnPath, LessonPlayer, Leaderboard, Quests, Shop, Handwriting, Challenge, Speaking, Progress
 │   │   ├── context/             # AuthContext (JWT) & LanguageContext (Tamil/Telugu/Hindi)
-│   │   ├── services/            # Axios API clients
+│   │   ├── services/            # Axios API clients (auth, voice, learnService, ...)
 │   │   ├── App.jsx              # React Router setup
 │   │   ├── main.jsx             # React entry point & PWA service worker registration
 │   │   └── index.css            # Tailwind design system with warm child-friendly theme
@@ -236,7 +242,13 @@ Open your browser at:
 
 ---
 
-## 🧪 Testing the 3 Core Modules
+## 🧪 Testing the 4 Core Modules
+
+### 🗺️ Module 0: Learning Path & Gamification (defaults to the Path tab)
+1. Sign in and open the **Path** tab (or the "Learning Path" card on the Dashboard).
+2. Click the **START** node to see the lesson intro (XP reward) and start a lesson.
+3. Complete the mixed exercises — wrong answers cost **hearts** ❤, streaks extend 🔥, XP and gems are awarded ⚡💎.
+4. Visit **Quests** 📜 (daily gem chests), **Leagues** 🏆 (weekly XP with promotion/demotion zones) and the **Shop** 🛒 (heart refills, streak freezes, daily goals).
 
 ### ✍️ Module 1: AI Handwriting Tutor
 1. Navigate to `/handwriting` from the Dashboard.
