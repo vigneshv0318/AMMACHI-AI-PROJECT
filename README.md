@@ -1,8 +1,8 @@
-# 👵 Ammachi – AI-Powered Native Language Learning Platform for NRI Children
+#  Ammachi – AI-Powered Native Language Learning Platform for NRI Children
 
 <div align="center">
 
-<img src="frontend/public/logo/logo.png" alt="Ammachi Logo" width="200" />
+
 
 **Your Personal AI Native Language Companion & Cultural Storyteller**
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **Ammachi ("Grandmother's Class")** is a production-ready, installable **Progressive Web App (PWA)** designed to help NRI (Non-Resident Indian) children learn, retain, and celebrate Indian native languages (**Tamil, Telugu, Hindi, Malayalam, and Kannada**). 
 
@@ -30,7 +30,7 @@ The platform combines warm, motherly AI mentorship with cutting-edge vision, spe
 
 ---
 
-## 🛠️ Upgraded Architecture & Tech Stack
+##  Upgraded Architecture & Tech Stack
 
 ```text
                                ┌────────────────────────────────┐
@@ -64,7 +64,7 @@ The platform combines warm, motherly AI mentorship with cutting-edge vision, spe
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 AI-Native-Language-Tutor-main/
@@ -124,7 +124,7 @@ AI-Native-Language-Tutor-main/
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### Prerequisites
 - **Python 3.10+** (Python 3.11 recommended)
@@ -219,11 +219,11 @@ npm run dev
 ```
 
 Open your browser at:
-👉 `http://localhost:5173`
+`http://localhost:5173`
 
 ---
 
-## 📱 Testing Progressive Web App (PWA) Features
+## Testing Progressive Web App (PWA) Features
 
 ### 1. Desktop Installation (Chrome / Edge)
 1. Open `http://localhost:5173` in Google Chrome or Microsoft Edge.
@@ -242,15 +242,15 @@ Open your browser at:
 
 ---
 
-## 🧪 Testing the 4 Core Modules
+## Testing the 4 Core Modules
 
-### 🗺️ Module 0: Learning Path & Gamification (defaults to the Path tab)
+### Module 0: Learning Path & Gamification (defaults to the Path tab)
 1. Sign in and open the **Path** tab (or the "Learning Path" card on the Dashboard).
 2. Click the **START** node to see the lesson intro (XP reward) and start a lesson.
-3. Complete the mixed exercises — wrong answers cost **hearts** ❤, streaks extend 🔥, XP and gems are awarded ⚡💎.
-4. Visit **Quests** 📜 (daily gem chests), **Leagues** 🏆 (weekly XP with promotion/demotion zones) and the **Shop** 🛒 (heart refills, streak freezes, daily goals).
+3. Complete the mixed exercises — wrong answers cost **hearts** ❤, streaks extend , XP and gems are awarded.
+4. Visit **Quests**  (daily gem chests), **Leagues**  (weekly XP with promotion/demotion zones) and the **Shop** 🛒 (heart refills, streak freezes, daily goals).
 
-### ✍️ Module 1: AI Handwriting Tutor
+###  Module 1: AI Handwriting Tutor
 1. Navigate to `/handwriting` from the Dashboard.
 2. Choose your language (Tamil, Telugu, Hindi, Malayalam) and select a target character.
 3. Write the character in your physical notebook.
@@ -261,7 +261,7 @@ Open your browser at:
    - If Bodhan recognizes an invalid character (e.g. shadow artifact), a heavy CV pass (CLAHE + Thresholding) is run to suppress notebook lines and shadows before re-running OCR.
    - The final detected character is compared against the actual target character, and you are provided deterministic feedback.
 
-### 🎤 Module 2: AI Voice Agent
+###  Module 2: AI Voice Agent
 1. Navigate to `/speaking`.
 2. Tap **"Tap to Speak 🎙️"** and grant microphone permission when prompted.
 3. Say words or sentences (e.g., *"Vazhaipazham"* or *"Vanakkam Ammachi"*).
@@ -270,7 +270,7 @@ Open your browser at:
    - The Patience Agent denoises any pauses or repetitions.
    - Ammachi replies in a warm voice (ElevenLabs / gTTS) and awards fluency points.
 
-### 🏆 Module 3: Challenge-a-Friend
+###  Module 3: Challenge-a-Friend
 1. Navigate to `/challenge`.
 2. Enter your friend's username to start a new Challenge match.
 3. **The 10-Question Gamified Loop:**
@@ -280,7 +280,7 @@ Open your browser at:
 
 ---
 
-## 🔒 Security & Best Practices
+## Security & Best Practices
 - **No Hardcoded Secrets**: All API keys, database credentials, and JWT secrets are managed via environment variables.
 - **Secure Password Hashing**: Passwords are hashed using salted cryptographic hashing (PBKDF2-SHA256).
 - **Protected Endpoints**: JWT validation middleware ensures user privacy and progress integrity.
