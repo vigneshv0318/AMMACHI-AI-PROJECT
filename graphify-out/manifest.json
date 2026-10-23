@@ -1,0 +1,848 @@
+{
+  "ammachi/app.py": {
+    "mtime": 1792497359.4226105,
+    "seen": 1792741924.5547109,
+    "ast_hash": "275872c5d67056c79975a851b6afc173",
+    "semantic_hash": "275872c5d67056c79975a851b6afc173"
+  },
+  "ammachi/auth.py": {
+    "mtime": 1792497359.424628,
+    "seen": 1792741924.5547109,
+    "ast_hash": "8a47972c139fcab819c7e6d7c3bb5662",
+    "semantic_hash": "8a47972c139fcab819c7e6d7c3bb5662"
+  },
+  "ammachi/modules/__init__.py": {
+    "mtime": 1792497359.4262006,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "ammachi/modules/culture.py": {
+    "mtime": 1792497359.4277148,
+    "seen": 1792741924.5547109,
+    "ast_hash": "694c6a84641e0ff993354bcd1f646e73",
+    "semantic_hash": "694c6a84641e0ff993354bcd1f646e73"
+  },
+  "ammachi/modules/vision.py": {
+    "mtime": 1792497359.429585,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d0948a078b1f1c684a7d085b04b1552e",
+    "semantic_hash": "d0948a078b1f1c684a7d085b04b1552e"
+  },
+  "ammachi/modules/voice.py": {
+    "mtime": 1792497359.429585,
+    "seen": 1792741924.5547109,
+    "ast_hash": "458e38184191065b6dcf2cffe5d36946",
+    "semantic_hash": "458e38184191065b6dcf2cffe5d36946"
+  },
+  "ammachi/oauth_utils.py": {
+    "mtime": 1792497359.4330933,
+    "seen": 1792741924.5547109,
+    "ast_hash": "52dc27ce9c923d17e0f1a62e0d869634",
+    "semantic_hash": "52dc27ce9c923d17e0f1a62e0d869634"
+  },
+  "ammachi/util.py": {
+    "mtime": 1792497359.4363973,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6109b036b7b8d0757e1eb0e353fc83eb",
+    "semantic_hash": "6109b036b7b8d0757e1eb0e353fc83eb"
+  },
+  "backend/agents/langgraph_culture.py": {
+    "mtime": 1792497359.4401195,
+    "seen": 1792741924.5547109,
+    "ast_hash": "ee785c725e4b97bdb5f35d293fefb633",
+    "semantic_hash": "ee785c725e4b97bdb5f35d293fefb633"
+  },
+  "backend/agents/patience_agent.py": {
+    "mtime": 1792497359.4401195,
+    "seen": 1792741924.5547109,
+    "ast_hash": "9e444596fe705711d142561d87a9e5f5",
+    "semantic_hash": "9e444596fe705711d142561d87a9e5f5"
+  },
+  "backend/api/__init__.py": {
+    "mtime": 1792497359.4432824,
+    "seen": 1792741924.5547109,
+    "ast_hash": "ab6128fb39a2e0cf85f66434ca4ea474",
+    "semantic_hash": "ab6128fb39a2e0cf85f66434ca4ea474"
+  },
+  "backend/api/auth.py": {
+    "mtime": 1792497359.4432824,
+    "seen": 1792741924.5547109,
+    "ast_hash": "e0e80b0424e5b15940cb09f17c29e437",
+    "semantic_hash": "e0e80b0424e5b15940cb09f17c29e437"
+  },
+  "backend/api/challenge.py": {
+    "mtime": 1792497359.4469585,
+    "seen": 1792741924.5547109,
+    "ast_hash": "524e916657592d725fc8d2cbb04fe65e",
+    "semantic_hash": "524e916657592d725fc8d2cbb04fe65e"
+  },
+  "backend/api/culture.py": {
+    "mtime": 1792497359.4469585,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5d26f18ee208a3b16acd65a0ad7f5b83",
+    "semantic_hash": "5d26f18ee208a3b16acd65a0ad7f5b83"
+  },
+  "backend/api/handwriting.py": {
+    "mtime": 1792497359.4500618,
+    "seen": 1792741924.5547109,
+    "ast_hash": "12fea197784e1f57cc2af643c260fb37",
+    "semantic_hash": "12fea197784e1f57cc2af643c260fb37"
+  },
+  "backend/api/learn.py": {
+    "mtime": 1792580635.676511,
+    "seen": 1792741924.5547109,
+    "ast_hash": "f8ace1474850818ea2ceea50b913b58f",
+    "semantic_hash": "f8ace1474850818ea2ceea50b913b58f"
+  },
+  "backend/api/user.py": {
+    "mtime": 1792497359.4500618,
+    "seen": 1792741924.5547109,
+    "ast_hash": "b31710aec7d231ed0cbbd9ce7c780f4f",
+    "semantic_hash": "b31710aec7d231ed0cbbd9ce7c780f4f"
+  },
+  "backend/api/voice.py": {
+    "mtime": 1792497359.4500618,
+    "seen": 1792741924.5547109,
+    "ast_hash": "61de409944c231c599939efb725e29b5",
+    "semantic_hash": "61de409944c231c599939efb725e29b5"
+  },
+  "backend/database.py": {
+    "mtime": 1792497359.4500618,
+    "seen": 1792741924.5547109,
+    "ast_hash": "208b8ade8b4096a890411524fcac9171",
+    "semantic_hash": "208b8ade8b4096a890411524fcac9171"
+  },
+  "backend/database/__init__.py": {
+    "mtime": 1792497359.4538262,
+    "seen": 1792741924.5547109,
+    "ast_hash": "cec114f32f0642a9119043b2a58847a8",
+    "semantic_hash": "cec114f32f0642a9119043b2a58847a8"
+  },
+  "backend/database/connection.py": {
+    "mtime": 1792501875.7717588,
+    "seen": 1792741924.5547109,
+    "ast_hash": "1b27c0e34d16780cca72debd8712318d",
+    "semantic_hash": "1b27c0e34d16780cca72debd8712318d"
+  },
+  "backend/database/crud.py": {
+    "mtime": 1792497359.4569626,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5f35e5c60c8d306d87ebc9d759272664",
+    "semantic_hash": "5f35e5c60c8d306d87ebc9d759272664"
+  },
+  "backend/database/handwriting_models.py": {
+    "mtime": 1792497359.4569626,
+    "seen": 1792741924.5547109,
+    "ast_hash": "4b696f0c4a7a449ede15140d52f400e6",
+    "semantic_hash": "4b696f0c4a7a449ede15140d52f400e6"
+  },
+  "backend/database/learn_models.py": {
+    "mtime": 1792502866.262677,
+    "seen": 1792741924.5547109,
+    "ast_hash": "4683ed3446c5b5d6c2a542c9c53725d9",
+    "semantic_hash": "4683ed3446c5b5d6c2a542c9c53725d9"
+  },
+  "backend/database/models.py": {
+    "mtime": 1792497359.460843,
+    "seen": 1792741924.5547109,
+    "ast_hash": "9a65ec69d26d70976d83bb6534f88391",
+    "semantic_hash": "9a65ec69d26d70976d83bb6534f88391"
+  },
+  "backend/debug_mp.py": {
+    "mtime": 1792497359.460843,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5cf52341965bd25c1a44b2811b11082d",
+    "semantic_hash": "5cf52341965bd25c1a44b2811b11082d"
+  },
+  "backend/diag.py": {
+    "mtime": 1792497359.4634109,
+    "seen": 1792741924.5547109,
+    "ast_hash": "06d6f1e6fbe38f9eb598dc365555a99c",
+    "semantic_hash": "06d6f1e6fbe38f9eb598dc365555a99c"
+  },
+  "backend/main.py": {
+    "mtime": 1792501855.3669028,
+    "seen": 1792741924.5547109,
+    "ast_hash": "04d631501ecdf0dc3c89cbb3bf2203e5",
+    "semantic_hash": "04d631501ecdf0dc3c89cbb3bf2203e5"
+  },
+  "backend/migrate_to_supabase.py": {
+    "mtime": 1792497359.4634109,
+    "seen": 1792741924.5547109,
+    "ast_hash": "c2e8cb39e473fcbaabd0cb77b79c273a",
+    "semantic_hash": "c2e8cb39e473fcbaabd0cb77b79c273a"
+  },
+  "backend/models.py": {
+    "mtime": 1792497359.4634109,
+    "seen": 1792741924.5547109,
+    "ast_hash": "c9d6d9b5bb9dd70fd192b3334aeab6ac",
+    "semantic_hash": "c9d6d9b5bb9dd70fd192b3334aeab6ac"
+  },
+  "backend/schemas/__init__.py": {
+    "mtime": 1792497359.4678113,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6e2786d3a907cdbc8fce31808cee00c3",
+    "semantic_hash": "6e2786d3a907cdbc8fce31808cee00c3"
+  },
+  "backend/schemas/auth.py": {
+    "mtime": 1792497359.4678113,
+    "seen": 1792741924.5547109,
+    "ast_hash": "f637b7b11f8d82349a442c2db2157d6c",
+    "semantic_hash": "f637b7b11f8d82349a442c2db2157d6c"
+  },
+  "backend/schemas/challenge.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "73cdf3c0d08a3844f52d1a6852b294c0",
+    "semantic_hash": "73cdf3c0d08a3844f52d1a6852b294c0"
+  },
+  "backend/schemas/culture.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "da1443c71145eac310b6aa3b5267727a",
+    "semantic_hash": "da1443c71145eac310b6aa3b5267727a"
+  },
+  "backend/schemas/handwriting.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "63e74688e0388a5a897b9ab94838b761",
+    "semantic_hash": "63e74688e0388a5a897b9ab94838b761"
+  },
+  "backend/schemas/learn.py": {
+    "mtime": 1792501704.4232278,
+    "seen": 1792741924.5547109,
+    "ast_hash": "66a2e9a9e644eae6ed0f50bacd72d042",
+    "semantic_hash": "66a2e9a9e644eae6ed0f50bacd72d042"
+  },
+  "backend/schemas/user.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "3ae6f5a7052c0ad7d3bd19e6f4e07b74",
+    "semantic_hash": "3ae6f5a7052c0ad7d3bd19e6f4e07b74"
+  },
+  "backend/schemas/voice.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "ee147864fbb9e915d2d7a7ff2f9ce6ec",
+    "semantic_hash": "ee147864fbb9e915d2d7a7ff2f9ce6ec"
+  },
+  "backend/seed_letters.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "f00b6815ab5ecadc749357f37ee03e25",
+    "semantic_hash": "f00b6815ab5ecadc749357f37ee03e25"
+  },
+  "backend/services/bodhan_ocr.py": {
+    "mtime": 1792497359.4716196,
+    "seen": 1792741924.5547109,
+    "ast_hash": "31c918d8443741b9d961965869b0ae83",
+    "semantic_hash": "31c918d8443741b9d961965869b0ae83"
+  },
+  "backend/services/challenge_ai.py": {
+    "mtime": 1792497359.4800382,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d9015186b2880e153ce42abc8825fad4",
+    "semantic_hash": "d9015186b2880e153ce42abc8825fad4"
+  },
+  "backend/services/challenge_service.py": {
+    "mtime": 1792497359.4800382,
+    "seen": 1792741924.5547109,
+    "ast_hash": "33a5007035a8067402b805c7e271a0fa",
+    "semantic_hash": "33a5007035a8067402b805c7e271a0fa"
+  },
+  "backend/services/culture_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "1c4ae49140a032978f5f27ab5733aa13",
+    "semantic_hash": "1c4ae49140a032978f5f27ab5733aa13"
+  },
+  "backend/services/gamification.py": {
+    "mtime": 1792503073.9294758,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6d68e90797a3351aede517c8bd6df6ac",
+    "semantic_hash": "6d68e90797a3351aede517c8bd6df6ac"
+  },
+  "backend/services/gemini_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "85b49bd96a7b9fe5ff5372a4992c79e1",
+    "semantic_hash": "85b49bd96a7b9fe5ff5372a4992c79e1"
+  },
+  "backend/services/handwriting_preprocessor.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "1761c62445649dff54500cdd2b1671ea",
+    "semantic_hash": "1761c62445649dff54500cdd2b1671ea"
+  },
+  "backend/services/handwriting_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "0153790a9883166cf7edd231445e922d",
+    "semantic_hash": "0153790a9883166cf7edd231445e922d"
+  },
+  "backend/services/image_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "bf31adb4cb4e8177d60afc58d96a743a",
+    "semantic_hash": "bf31adb4cb4e8177d60afc58d96a743a"
+  },
+  "backend/services/learn_content.py": {
+    "mtime": 1792580604.3178477,
+    "seen": 1792741924.5547109,
+    "ast_hash": "46f7ec611b54c1b8e9b87ba489ce0fb4",
+    "semantic_hash": "46f7ec611b54c1b8e9b87ba489ce0fb4"
+  },
+  "backend/services/news_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5ede9d1892999c06a78f4240ac75183d",
+    "semantic_hash": "5ede9d1892999c06a78f4240ac75183d"
+  },
+  "backend/services/storage_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5b358da42dab339a2cd2db220c56c0af",
+    "semantic_hash": "5b358da42dab339a2cd2db220c56c0af"
+  },
+  "backend/services/voice_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "be8ddf6cebeb6e81af8a1c6e50cac48c",
+    "semantic_hash": "be8ddf6cebeb6e81af8a1c6e50cac48c"
+  },
+  "backend/services/youtube_service.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "a797e7909f00fc23f5ef5fbb10e0895d",
+    "semantic_hash": "a797e7909f00fc23f5ef5fbb10e0895d"
+  },
+  "backend/test_graph.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "388e8969ae38f160f8ab9582b12a8bdd",
+    "semantic_hash": "388e8969ae38f160f8ab9582b12a8bdd"
+  },
+  "backend/tests/test_handwriting.py": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "df44f56d10f6a8bad004e472fac18329",
+    "semantic_hash": "df44f56d10f6a8bad004e472fac18329"
+  },
+  "frontend/package.json": {
+    "mtime": 1792497359.4959412,
+    "seen": 1792741924.5547109,
+    "ast_hash": "17786add3468e79beb91554da91281ec",
+    "semantic_hash": "17786add3468e79beb91554da91281ec"
+  },
+  "frontend/postcss.config.js": {
+    "mtime": 1792497359.4959412,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5b84f4567208c7c747079c0477373231",
+    "semantic_hash": "5b84f4567208c7c747079c0477373231"
+  },
+  "frontend/src/App.jsx": {
+    "mtime": 1792502519.1524148,
+    "seen": 1792741924.5547109,
+    "ast_hash": "97b5772123434c01c60c3ae4bddccabd",
+    "semantic_hash": "97b5772123434c01c60c3ae4bddccabd"
+  },
+  "frontend/src/components/auth/ProtectedRoute.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d4bf2311ea749b89fd1c8d9f115776c0",
+    "semantic_hash": "d4bf2311ea749b89fd1c8d9f115776c0"
+  },
+  "frontend/src/components/common/AmmachiMascot.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "0dc081e8fd3ca72126843c02a0feb7e1",
+    "semantic_hash": "0dc081e8fd3ca72126843c02a0feb7e1"
+  },
+  "frontend/src/components/common/Confetti.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "3071061d1e55264b593332caa6f9bd26",
+    "semantic_hash": "3071061d1e55264b593332caa6f9bd26"
+  },
+  "frontend/src/components/common/InstallPrompt.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "fc299523c9139ca132a15968abf5be5d",
+    "semantic_hash": "fc299523c9139ca132a15968abf5be5d"
+  },
+  "frontend/src/components/common/LoadingScreen.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "de55910e9263d25f60a1cdb3142ab355",
+    "semantic_hash": "de55910e9263d25f60a1cdb3142ab355"
+  },
+  "frontend/src/components/common/SpeechBubble.jsx": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6f4729deb1d9d67846792c56e3e18e5a",
+    "semantic_hash": "6f4729deb1d9d67846792c56e3e18e5a"
+  },
+  "frontend/src/components/layout/BottomNav.jsx": {
+    "mtime": 1792502584.7289333,
+    "seen": 1792741924.5547109,
+    "ast_hash": "42b1667a2edb166c63218bca47eab23d",
+    "semantic_hash": "42b1667a2edb166c63218bca47eab23d"
+  },
+  "frontend/src/components/layout/Layout.jsx": {
+    "mtime": 1792497359.6021285,
+    "seen": 1792741924.5547109,
+    "ast_hash": "51fece6dde75d10931cbe27a7ff6e9e9",
+    "semantic_hash": "51fece6dde75d10931cbe27a7ff6e9e9"
+  },
+  "frontend/src/components/layout/Navbar.jsx": {
+    "mtime": 1792502532.3772979,
+    "seen": 1792741924.5547109,
+    "ast_hash": "f1572ed726d52003c39f4851a55dc9cb",
+    "semantic_hash": "f1572ed726d52003c39f4851a55dc9cb"
+  },
+  "frontend/src/components/learn/LearnHud.jsx": {
+    "mtime": 1792502539.6744118,
+    "seen": 1792741924.5547109,
+    "ast_hash": "8ca33e0a3ed3ced605eb9f52e5607bc0",
+    "semantic_hash": "8ca33e0a3ed3ced605eb9f52e5607bc0"
+  },
+  "frontend/src/components/learn/audio.js": {
+    "mtime": 1792502379.3355334,
+    "seen": 1792741924.5547109,
+    "ast_hash": "b15deb5c0a30dd0aa04586ebe31566b9",
+    "semantic_hash": "b15deb5c0a30dd0aa04586ebe31566b9"
+  },
+  "frontend/src/components/learn/exercises.jsx": {
+    "mtime": 1792502709.3326106,
+    "seen": 1792741924.5547109,
+    "ast_hash": "a076fff032f6839c544cf0299f4c0309",
+    "semantic_hash": "a076fff032f6839c544cf0299f4c0309"
+  },
+  "frontend/src/components/writing/CameraCapture.jsx": {
+    "mtime": 1792497359.6041417,
+    "seen": 1792741924.5547109,
+    "ast_hash": "4b18f5624ee9d441641b7bd80d4a7601",
+    "semantic_hash": "4b18f5624ee9d441641b7bd80d4a7601"
+  },
+  "frontend/src/components/writing/CurriculumBrowser.jsx": {
+    "mtime": 1792497359.6061552,
+    "seen": 1792741924.5547109,
+    "ast_hash": "8c96d311b610f7a80abd04041a912602",
+    "semantic_hash": "8c96d311b610f7a80abd04041a912602"
+  },
+  "frontend/src/components/writing/HandwritingCanvas.jsx": {
+    "mtime": 1792497359.6071682,
+    "seen": 1792741924.5547109,
+    "ast_hash": "bc6acf8e771bb9d0672364176755617f",
+    "semantic_hash": "bc6acf8e771bb9d0672364176755617f"
+  },
+  "frontend/src/components/writing/StrokeAnimationModal.jsx": {
+    "mtime": 1792497359.6071682,
+    "seen": 1792741924.5547109,
+    "ast_hash": "12ba501b7f488e4515ae0f75352c6057",
+    "semantic_hash": "12ba501b7f488e4515ae0f75352c6057"
+  },
+  "frontend/src/context/AuthContext.jsx": {
+    "mtime": 1792497359.6071682,
+    "seen": 1792741924.5547109,
+    "ast_hash": "c2976dcb393b49680abb3f5b20430fde",
+    "semantic_hash": "c2976dcb393b49680abb3f5b20430fde"
+  },
+  "frontend/src/context/LanguageContext.jsx": {
+    "mtime": 1792497359.6071682,
+    "seen": 1792741924.5547109,
+    "ast_hash": "577a2ef06e678359afce5fff0746cf21",
+    "semantic_hash": "577a2ef06e678359afce5fff0746cf21"
+  },
+  "frontend/src/main.jsx": {
+    "mtime": 1792497359.613436,
+    "seen": 1792741924.5547109,
+    "ast_hash": "a59596b2de870968f07a61ebeac7bf5a",
+    "semantic_hash": "a59596b2de870968f07a61ebeac7bf5a"
+  },
+  "frontend/src/pages/AuthPage.jsx": {
+    "mtime": 1792497359.613436,
+    "seen": 1792741924.5547109,
+    "ast_hash": "38df05243edacbe81b3b1fa333c8d46e",
+    "semantic_hash": "38df05243edacbe81b3b1fa333c8d46e"
+  },
+  "frontend/src/pages/ChallengePage.jsx": {
+    "mtime": 1792497359.6167443,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d6da8dfdeb5c810c77de4981185eb10c",
+    "semantic_hash": "d6da8dfdeb5c810c77de4981185eb10c"
+  },
+  "frontend/src/pages/CulturePage.jsx": {
+    "mtime": 1792497359.6181674,
+    "seen": 1792741924.5547109,
+    "ast_hash": "e075e9a9f6ce368892bfff553aed60b9",
+    "semantic_hash": "e075e9a9f6ce368892bfff553aed60b9"
+  },
+  "frontend/src/pages/DashboardPage.jsx": {
+    "mtime": 1792502557.2621233,
+    "seen": 1792741924.5547109,
+    "ast_hash": "a0924c660099e3634091d5676faee6ef",
+    "semantic_hash": "a0924c660099e3634091d5676faee6ef"
+  },
+  "frontend/src/pages/HandwritingPage.jsx": {
+    "mtime": 1792497359.6181674,
+    "seen": 1792741924.5547109,
+    "ast_hash": "daf7b369edafa2bf56580cdbe15c36e1",
+    "semantic_hash": "daf7b369edafa2bf56580cdbe15c36e1"
+  },
+  "frontend/src/pages/LeaderboardPage.jsx": {
+    "mtime": 1792502452.7850432,
+    "seen": 1792741924.5547109,
+    "ast_hash": "94b5eefa3037f59c2cec84cf5f36b1dc",
+    "semantic_hash": "94b5eefa3037f59c2cec84cf5f36b1dc"
+  },
+  "frontend/src/pages/LearnPathPage.jsx": {
+    "mtime": 1792570464.8841646,
+    "seen": 1792741924.5547109,
+    "ast_hash": "eeec7034e5d2a8a551fb0301d355335c",
+    "semantic_hash": "eeec7034e5d2a8a551fb0301d355335c"
+  },
+  "frontend/src/pages/LessonPlayerPage.jsx": {
+    "mtime": 1792502709.342147,
+    "seen": 1792741924.5547109,
+    "ast_hash": "8d138aefdbfcffc9c459db037458ca85",
+    "semantic_hash": "8d138aefdbfcffc9c459db037458ca85"
+  },
+  "frontend/src/pages/ProfilePage.jsx": {
+    "mtime": 1792497359.6181674,
+    "seen": 1792741924.5547109,
+    "ast_hash": "eecd7ff237d044acf76b6746a4cdb780",
+    "semantic_hash": "eecd7ff237d044acf76b6746a4cdb780"
+  },
+  "frontend/src/pages/ProgressPage.jsx": {
+    "mtime": 1792497359.6181674,
+    "seen": 1792741924.5547109,
+    "ast_hash": "de483359f3f78314d27ccd6914653f8a",
+    "semantic_hash": "de483359f3f78314d27ccd6914653f8a"
+  },
+  "frontend/src/pages/QuestsPage.jsx": {
+    "mtime": 1792502548.2648952,
+    "seen": 1792741924.5547109,
+    "ast_hash": "3a0407baa246bdc422eaf15426eb2025",
+    "semantic_hash": "3a0407baa246bdc422eaf15426eb2025"
+  },
+  "frontend/src/pages/ShopPage.jsx": {
+    "mtime": 1792502548.263201,
+    "seen": 1792741924.5547109,
+    "ast_hash": "01579404550b0eb923aff5fa99c7d63d",
+    "semantic_hash": "01579404550b0eb923aff5fa99c7d63d"
+  },
+  "frontend/src/pages/SpeakingPage.jsx": {
+    "mtime": 1792497359.6230042,
+    "seen": 1792741924.5547109,
+    "ast_hash": "e58aad5f228b95b161f295e29ff3d313",
+    "semantic_hash": "e58aad5f228b95b161f295e29ff3d313"
+  },
+  "frontend/src/pages/WritingPage.jsx": {
+    "mtime": 1792497359.6250224,
+    "seen": 1792741924.5547109,
+    "ast_hash": "52d33d08120775ee52c277be0ed5e3bd",
+    "semantic_hash": "52d33d08120775ee52c277be0ed5e3bd"
+  },
+  "frontend/src/services/api.js": {
+    "mtime": 1792497359.6250224,
+    "seen": 1792741924.5547109,
+    "ast_hash": "b6c10c49b6ff4f2e0b8e389d6b9a24e0",
+    "semantic_hash": "b6c10c49b6ff4f2e0b8e389d6b9a24e0"
+  },
+  "frontend/src/services/authService.js": {
+    "mtime": 1792497359.6270378,
+    "seen": 1792741924.5547109,
+    "ast_hash": "2e26bfe8f50e4b6a98b3164ab4a7c6e2",
+    "semantic_hash": "2e26bfe8f50e4b6a98b3164ab4a7c6e2"
+  },
+  "frontend/src/services/challengeService.js": {
+    "mtime": 1792497359.6270378,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6bb9f23ab809ed8b10bd15b64ecdd34f",
+    "semantic_hash": "6bb9f23ab809ed8b10bd15b64ecdd34f"
+  },
+  "frontend/src/services/cultureService.js": {
+    "mtime": 1792497359.6292531,
+    "seen": 1792741924.5547109,
+    "ast_hash": "309e31d2cf5dda3dc51f9d3bc14cb684",
+    "semantic_hash": "309e31d2cf5dda3dc51f9d3bc14cb684"
+  },
+  "frontend/src/services/handwritingService.js": {
+    "mtime": 1792497359.6292531,
+    "seen": 1792741924.5547109,
+    "ast_hash": "041272ad5cdc9ea7bd089f28d13a6674",
+    "semantic_hash": "041272ad5cdc9ea7bd089f28d13a6674"
+  },
+  "frontend/src/services/learnService.js": {
+    "mtime": 1792502089.9622283,
+    "seen": 1792741924.5547109,
+    "ast_hash": "f05fe5a076637ecf7d9f51edad44b603",
+    "semantic_hash": "f05fe5a076637ecf7d9f51edad44b603"
+  },
+  "frontend/src/services/userService.js": {
+    "mtime": 1792497359.6310165,
+    "seen": 1792741924.5547109,
+    "ast_hash": "3336189b21b8eb9271a1f7bf3fc894f2",
+    "semantic_hash": "3336189b21b8eb9271a1f7bf3fc894f2"
+  },
+  "frontend/src/services/visionService.js": {
+    "mtime": 1792497359.6310165,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6afbe6cb010fd746536fd68536d6050d",
+    "semantic_hash": "6afbe6cb010fd746536fd68536d6050d"
+  },
+  "frontend/src/services/voiceService.js": {
+    "mtime": 1792497359.6310165,
+    "seen": 1792741924.5547109,
+    "ast_hash": "3b8c2184989117fc10c2973c18c0d057",
+    "semantic_hash": "3b8c2184989117fc10c2973c18c0d057"
+  },
+  "frontend/src/utils/pwaInstall.js": {
+    "mtime": 1792497359.6330297,
+    "seen": 1792741924.5547109,
+    "ast_hash": "7754ae1cf9976b302ae827a82328f8e3",
+    "semantic_hash": "7754ae1cf9976b302ae827a82328f8e3"
+  },
+  "frontend/tailwind.config.js": {
+    "mtime": 1792497359.6340435,
+    "seen": 1792741924.5547109,
+    "ast_hash": "fea630dd70b3d2d10ea066ad536a3669",
+    "semantic_hash": "fea630dd70b3d2d10ea066ad536a3669"
+  },
+  "frontend/vercel.json": {
+    "mtime": 1792497359.6340435,
+    "seen": 1792741924.5547109,
+    "ast_hash": "7708fbf29b99cd92c2a778d60001c5ba",
+    "semantic_hash": "7708fbf29b99cd92c2a778d60001c5ba"
+  },
+  "frontend/vite.config.js": {
+    "mtime": 1792497359.6360552,
+    "seen": 1792741924.5547109,
+    "ast_hash": "913d10a03df075bd5ed6dd8099e44298",
+    "semantic_hash": "913d10a03df075bd5ed6dd8099e44298"
+  },
+  "scratch/test_complete_curriculum.py": {
+    "mtime": 1792497359.6360552,
+    "seen": 1792741924.5547109,
+    "ast_hash": "27a8f8f4fd09fb32cdc6570e27978a9f",
+    "semantic_hash": "27a8f8f4fd09fb32cdc6570e27978a9f"
+  },
+  "scratch/test_writing_pipeline.py": {
+    "mtime": 1792497359.6380682,
+    "seen": 1792741924.5547109,
+    "ast_hash": "22ae2f5d5b15ece1720efad36503af0a",
+    "semantic_hash": "22ae2f5d5b15ece1720efad36503af0a"
+  },
+  "BACKEND_ARCHITECTURE.md": {
+    "mtime": 1792497359.4149542,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d6ba91289525a2066873d1c6e4c607b9",
+    "semantic_hash": "d6ba91289525a2066873d1c6e4c607b9"
+  },
+  "BACKEND_SYSTEM.md": {
+    "mtime": 1792497359.4192622,
+    "seen": 1792741924.5547109,
+    "ast_hash": "1bffd2ccb93afb2b3b71b1c34d1ed651",
+    "semantic_hash": "1bffd2ccb93afb2b3b71b1c34d1ed651"
+  },
+  "README.md": {
+    "mtime": 1792739643.9450674,
+    "seen": 1792741924.5547109,
+    "ast_hash": "fc8bac8d77e2e017bb95e7772e9e7fcf",
+    "semantic_hash": "fc8bac8d77e2e017bb95e7772e9e7fcf"
+  },
+  "ammachi/requirements.txt": {
+    "mtime": 1792497359.4337485,
+    "seen": 1792741924.5547109,
+    "ast_hash": "532ee13fbb992e6344fb39321d784ef5",
+    "semantic_hash": "532ee13fbb992e6344fb39321d784ef5"
+  },
+  "backend/requirements.txt": {
+    "mtime": 1792497359.4678113,
+    "seen": 1792741924.5547109,
+    "ast_hash": "da5c0938e9903dd849b53be3a3b07371",
+    "semantic_hash": "da5c0938e9903dd849b53be3a3b07371"
+  },
+  "frontend/index.html": {
+    "mtime": 1792497359.4817114,
+    "seen": 1792741924.5547109,
+    "ast_hash": "db88d192f6b60db17c0f4454cb828dc5",
+    "semantic_hash": "db88d192f6b60db17c0f4454cb828dc5"
+  },
+  "frontend/public/apple-touch-icon.png": {
+    "mtime": 1792497359.4959412,
+    "seen": 1792741924.5547109,
+    "ast_hash": "4f37de404fe8d8c19db4740390c49168",
+    "semantic_hash": "4f37de404fe8d8c19db4740390c49168"
+  },
+  "frontend/public/favicon-48x48.png": {
+    "mtime": 1792497359.4989269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "82c592d8dad3e837d1dd840077e92fce",
+    "semantic_hash": "82c592d8dad3e837d1dd840077e92fce"
+  },
+  "frontend/public/favicon.svg": {
+    "mtime": 1792497359.4989269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "b7c75381f42f69a085c81873491ad5e5",
+    "semantic_hash": "b7c75381f42f69a085c81873491ad5e5"
+  },
+  "frontend/public/icons/challenge.svg": {
+    "mtime": 1792497359.4989269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "c4e8e0ca24fb90756673c3aa36330e2d",
+    "semantic_hash": "c4e8e0ca24fb90756673c3aa36330e2d"
+  },
+  "frontend/public/icons/culture.svg": {
+    "mtime": 1792497359.4989269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5062ca3a4c68dce6f12b468376a5a2d5",
+    "semantic_hash": "5062ca3a4c68dce6f12b468376a5a2d5"
+  },
+  "frontend/public/icons/handwriting.svg": {
+    "mtime": 1792497359.5028503,
+    "seen": 1792741924.5547109,
+    "ast_hash": "4820efb791326922dfa1e1ba935379e9",
+    "semantic_hash": "4820efb791326922dfa1e1ba935379e9"
+  },
+  "frontend/public/icons/voice.svg": {
+    "mtime": 1792497359.5028503,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d8dcab9da6a65d031662a711e82eda8b",
+    "semantic_hash": "d8dcab9da6a65d031662a711e82eda8b"
+  },
+  "frontend/public/images/culture/bonalu_festival.jpg": {
+    "mtime": 1792497359.510897,
+    "seen": 1792741924.5547109,
+    "ast_hash": "21eb6f1e4a13d888c70732b4b51265a7",
+    "semantic_hash": "21eb6f1e4a13d888c70732b4b51265a7"
+  },
+  "frontend/public/images/culture/brihadeeswara_temple.jpg": {
+    "mtime": 1792497359.5119083,
+    "seen": 1792741924.5547109,
+    "ast_hash": "5576c255b33bb13e2da30bf7d5407236",
+    "semantic_hash": "5576c255b33bb13e2da30bf7d5407236"
+  },
+  "frontend/public/images/culture/deepam_diya.jpg": {
+    "mtime": 1792497359.5119083,
+    "seen": 1792741924.5547109,
+    "ast_hash": "dcade02ee9a1b0b32fe8fd0c03f3ef0c",
+    "semantic_hash": "dcade02ee9a1b0b32fe8fd0c03f3ef0c"
+  },
+  "frontend/public/images/culture/diwali_lights.jpg": {
+    "mtime": 1792497359.522654,
+    "seen": 1792741924.5547109,
+    "ast_hash": "adce90c174374d654fce8ed035431c1e",
+    "semantic_hash": "adce90c174374d654fce8ed035431c1e"
+  },
+  "frontend/public/images/culture/goddess_lakshmi.jpg": {
+    "mtime": 1792497359.5417247,
+    "seen": 1792741924.5547109,
+    "ast_hash": "ba14312810079d1e89117b896a98d95b",
+    "semantic_hash": "ba14312810079d1e89117b896a98d95b"
+  },
+  "frontend/public/images/culture/karthigai_deepam.jpg": {
+    "mtime": 1792497359.549492,
+    "seen": 1792741924.5547109,
+    "ast_hash": "018ed77011446dc706cf68e62e2c8c58",
+    "semantic_hash": "018ed77011446dc706cf68e62e2c8c58"
+  },
+  "frontend/public/images/culture/lord_ganesha.jpg": {
+    "mtime": 1792497359.5514987,
+    "seen": 1792741924.5547109,
+    "ast_hash": "26e0c1c4a54f0343338c40633ebff2d4",
+    "semantic_hash": "26e0c1c4a54f0343338c40633ebff2d4"
+  },
+  "frontend/public/images/culture/lord_murugan.jpg": {
+    "mtime": 1792497359.5575197,
+    "seen": 1792741924.5547109,
+    "ast_hash": "b16f13de17a717d4a5d523200f843f10",
+    "semantic_hash": "b16f13de17a717d4a5d523200f843f10"
+  },
+  "frontend/public/images/culture/lord_shiva.jpg": {
+    "mtime": 1792497359.559269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "2d9a6cd389306fab5f675dbd64d741a5",
+    "semantic_hash": "2d9a6cd389306fab5f675dbd64d741a5"
+  },
+  "frontend/public/images/culture/mahabalipuram_shore.jpg": {
+    "mtime": 1792497359.559269,
+    "seen": 1792741924.5547109,
+    "ast_hash": "42f3b3c27e90d86308e3a40483ffb66c",
+    "semantic_hash": "42f3b3c27e90d86308e3a40483ffb66c"
+  },
+  "frontend/public/images/culture/onam_pookalam.jpg": {
+    "mtime": 1792497359.565162,
+    "seen": 1792741924.5547109,
+    "ast_hash": "0d2f02b0fd2eb28e8b8f28d13c9de58c",
+    "semantic_hash": "0d2f02b0fd2eb28e8b8f28d13c9de58c"
+  },
+  "frontend/public/images/culture/pongal_pot.jpg": {
+    "mtime": 1792497359.565162,
+    "seen": 1792741924.5547109,
+    "ast_hash": "9c4424faf1b05401c2dde3443951eb7c",
+    "semantic_hash": "9c4424faf1b05401c2dde3443951eb7c"
+  },
+  "frontend/public/images/culture/rajaraja_chola.jpg": {
+    "mtime": 1792497359.5714507,
+    "seen": 1792741924.5547109,
+    "ast_hash": "04ae2f9c5f88a820dcbc71910e64d7f6",
+    "semantic_hash": "04ae2f9c5f88a820dcbc71910e64d7f6"
+  },
+  "frontend/public/images/culture/sankranti_kites.jpg": {
+    "mtime": 1792497359.5714507,
+    "seen": 1792741924.5547109,
+    "ast_hash": "1b01f49e6a12513581f402c2d5d4c814",
+    "semantic_hash": "1b01f49e6a12513581f402c2d5d4c814"
+  },
+  "frontend/public/images/culture/thaipusam_kavadi.jpg": {
+    "mtime": 1792497359.5754707,
+    "seen": 1792741924.5547109,
+    "ast_hash": "c8098f3d239825929d471aadcb6fc971",
+    "semantic_hash": "c8098f3d239825929d471aadcb6fc971"
+  },
+  "frontend/public/images/culture/ugadi_pachadi.jpg": {
+    "mtime": 1792497359.5754707,
+    "seen": 1792741924.5547109,
+    "ast_hash": "d1215ef2bcd939dbdb45566593bac1cc",
+    "semantic_hash": "d1215ef2bcd939dbdb45566593bac1cc"
+  },
+  "frontend/public/logo/ammachi.svg": {
+    "mtime": 1792497359.5820563,
+    "seen": 1792741924.5547109,
+    "ast_hash": "6dc20cc2cd6ee05e0f065648d4f2afa9",
+    "semantic_hash": "6dc20cc2cd6ee05e0f065648d4f2afa9"
+  },
+  "frontend/public/pwa-192x192.png": {
+    "mtime": 1792497359.5832515,
+    "seen": 1792741924.5547109,
+    "ast_hash": "39017eb49d0fb2db986c91ba08085563",
+    "semantic_hash": "39017eb49d0fb2db986c91ba08085563"
+  },
+  "frontend/public/pwa-512x512.png": {
+    "mtime": 1792497359.5839071,
+    "seen": 1792741924.5547109,
+    "ast_hash": "cccf4dc5e2c217da9c4462d02089d2d8",
+    "semantic_hash": "cccf4dc5e2c217da9c4462d02089d2d8"
+  },
+  "frontend/public/pwa-maskable-512x512.png": {
+    "mtime": 1792497359.5839071,
+    "seen": 1792741924.5547109,
+    "ast_hash": "0ef4ad54eea68a40a6035226bf480f05",
+    "semantic_hash": "0ef4ad54eea68a40a6035226bf480f05"
+  },
+  "frontend/public/screenshots/culture.jpg": {
+    "mtime": 1792497359.5839071,
+    "seen": 1792741924.5547109,
+    "ast_hash": "954c6718a362096bc5fed4a37b38aa14",
+    "semantic_hash": "954c6718a362096bc5fed4a37b38aa14"
+  },
+  "frontend/public/screenshots/home.jpg": {
+    "mtime": 1792497359.5914578,
+    "seen": 1792741924.5547109,
+    "ast_hash": "343850a59139f17ce3c0d51bea5f0bf5",
+    "semantic_hash": "343850a59139f17ce3c0d51bea5f0bf5"
+  }
+}
